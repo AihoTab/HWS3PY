@@ -1,17 +1,11 @@
-# Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
+# 2 Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+from math import ceil
+num = [int(i) for i in input(). split()]
+for i in range(ceil(len(num)/2)):
+    print(num[i]*num[-i-1])
 
-num = [8, 7, 2, 14, 1, 3, 21, 41, 9, 6]
-print(num)
-summ = 0
-for i in range(1, len(num), 2):
-    summ += num[i]
-print(summ)
-
-
-# num = [8, 7, 2, 14, 1, 3, 21, 41, 9, 6]
-# print(num)
-# summ = 0
-# for i in range(1, len(num)):
-#     if i % 2 != 0:
-#         summ += num[i]
-# print(summ)
+# num = [int(i) for i in input(). split()]
+# print(type(num))
+# for i in range(0, len(num) / 2+1):
+#     prod = num[i] * num[len(num) - i - 1]
+# print(prod)
