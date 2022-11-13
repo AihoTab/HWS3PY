@@ -1,11 +1,17 @@
-# 2 Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-from math import ceil
-num = [int(i) for i in input(). split()]
-for i in range(ceil(len(num)/2)):
-    print(num[i]*num[-i-1])
+# 3 Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 
-# num = [int(i) for i in input(). split()]
-# print(type(num))
-# for i in range(0, len(num) / 2+1):
-#     prod = num[i] * num[len(num) - i - 1]
-# print(prod)
+num = list(map(float, input().split()))
+n_num = [round(i % 1, 2) for i in num if i % 1 != 0]
+print(max(n_num) - min(n_num))
+
+
+# num = [float(i) for i in input().split()]
+# max_ost = num[0] - int(num[0])
+# min_ost = num[0] - int(num[0])
+# for i in num:
+#     num - int(num)
+#     if num > max_ost:
+#         max_ost = num
+#     elif num[i] < min_ost:
+#         min_ost = num
+# print(max_ost - min_ost)
